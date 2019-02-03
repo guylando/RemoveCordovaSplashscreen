@@ -1,4 +1,4 @@
-# CordovaRemoveDefaultSplashscreen
+# RemoveCordovaSplashscreen
 It is mostly recommended to not put branding in the splashscreen and to make it look as the empty state of the first screen. So here is an explanation and script which helps to achieve that opening cordova app will have a blank page with the background color of your desire and statusbar of your desired style, for the 0-1 seconds before your first cordova page loads.
 
 We will assume your desired background color is black and desired status bar text color is white.
