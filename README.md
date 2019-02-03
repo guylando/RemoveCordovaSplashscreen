@@ -76,3 +76,4 @@ To achieve this do the following:
  Resources:
  - https://blog.phonegap.com/displaying-a-phonegap-app-correctly-on-the-iphone-x-c4a85664c493
  - https://medium.com/@photokandy/phonegap-build-supports-ios-launch-storyboards-44a4180bfafe
+ - https://cdn.rawgit.com/kerrishotts/launch-storyboard-images-previewer/0.3-release/index.html
