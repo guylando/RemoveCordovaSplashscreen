@@ -62,22 +62,22 @@ To achieve this do the following:
 
 	5.2. in MainActivity.java add:
 	```
-					@Override
-					protected void onResume() {
-						super.onResume();
+	@Override
+	protected void onResume() {
+		super.onResume();
 
-						// Change header color and icon in overview/recents screen
-						// Available only from API 21+
-						// NOTE: Must run this in onResume and not onCreate or otherwise in the first runs the icon will not be set and instead the default app icon will be used.
-						if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-							// See: https://github.com/aosp-mirror/platform_frameworks_base/blob/lollipop-release/packages/SystemUI/src/com/android/systemui/recents/model/Task.java#L147
-							// https://developer.android.com/reference/android/app/ActivityManager.TaskDescription
-							android.graphics.Bitmap icon = android.graphics.BitmapFactory.decodeResource(getResources(), R.drawable.recentAppsScreenHeaderIcon);
-							android.app.ActivityManager.TaskDescription taskDescription = new android.app.ActivityManager.TaskDescription(getResources().getString(R.string.app_name), icon, android.support.v4.content.res.ResourcesCompat.getColor(getResources(), R.color.overviewWindowHeaderColor, null));
-							// https://developer.android.com/reference/android/app/Activity#setTaskDescription(android.app.ActivityManager.TaskDescription)
-							((android.app.Activity)this).setTaskDescription(taskDescription);
-						}
-					}
+		// Change header color and icon in overview/recents screen
+		// Available only from API 21+
+		// NOTE: Must run this in onResume and not onCreate or otherwise in the first runs the icon will not be set and instead the default app icon will be used.
+		if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+			// See: https://github.com/aosp-mirror/platform_frameworks_base/blob/lollipop-release/packages/SystemUI/src/com/android/systemui/recents/model/Task.java#L147
+			// https://developer.android.com/reference/android/app/ActivityManager.TaskDescription
+			android.graphics.Bitmap icon = android.graphics.BitmapFactory.decodeResource(getResources(), R.drawable.recentAppsScreenHeaderIcon);
+			android.app.ActivityManager.TaskDescription taskDescription = new android.app.ActivityManager.TaskDescription(getResources().getString(R.string.app_name), icon, android.support.v4.content.res.ResourcesCompat.getColor(getResources(), R.color.overviewWindowHeaderColor, null));
+			// https://developer.android.com/reference/android/app/Activity#setTaskDescription(android.app.ActivityManager.TaskDescription)
+			((android.app.Activity)this).setTaskDescription(taskDescription);
+		}
+	}
 	```
 	- NOTE: This will get deleted on next platform re-adding
 
