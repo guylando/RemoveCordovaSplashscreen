@@ -103,17 +103,18 @@ To achieve this do the following:
  3. place the png in res/screens/ios folder of the cordova project
  
  4. in config.xml under platform ios tag insert the tags:
- 
-				4.1 `<splash src="res/screens/ios/Default@2x~universal~anyany.png" />`
-					- the tag must not have width and height set!
-					
-				4.2 `<config-file parent="UIStatusBarStyle" platform="ios" target="*-Info.plist"><string>UIStatusBarStyleLightContent</string></config-file>`
-					- using the status bar plugin without this does not change the status bar at launch
+	
+	4.1 `<splash src="res/screens/ios/Default@2x~universal~anyany.png" />`
+		- the tag must not have width and height set!
+	
+	4.2 `<config-file parent="UIStatusBarStyle" platform="ios" target="*-Info.plist"><string>UIStatusBarStyleLightContent</string></config-file>`
+		
+	- using the status bar plugin without this does not change the status bar at launch
  
  
  5. in xcode project (assuming you use UIWebView. similar solution for WKWebView) open "classes->MainViewController.m" and in the end of "viewDidLoad" method add: `"self.webView.opaque = false;"`
  
-				- NOTE: This will get deleted on next cordova platform re-adding
+	- NOTE: This will get deleted on next cordova platform re-adding
  
  
  Resources:
