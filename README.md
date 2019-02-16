@@ -58,7 +58,7 @@ To achieve this do the following:
 	
 5. To change color and icon of the "recents/overview screen" displayed when pressing android "overview button" https://developer.android.com/guide/components/activities/recents (prefer to add those lines than adding a whole new plugin for it https://github.com/tomloprod/cordova-plugin-headercolor):
 	
-	5.1. add color and icon resources
+	5.1. add color and icon drawable resources (overviewWindowHeaderColor, recentAppsScreenHeaderIcon)
 
 	5.2. in MainActivity.java add:
 	```
